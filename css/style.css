@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.title {
+    color: white;
+}
+
+.menu ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.menu ul li a:hover {
+    text-decoration: none;
+    color: red;
+    font-size: 1.3rem;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.contenedor {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: gray;
+    border-radius: 20px;
+}
