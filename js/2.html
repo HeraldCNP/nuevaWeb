@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title></title>
+
+	<style>
+	  form{
+        width:295px;
+    }
+
+    ul{
+        list-style:none;
+    }
+
+    label{
+        width:200px;
+        display:block;
+        margin:10px;
+        float:left;
+    }
+	
+	
+	</style>
+    </head>
+    
+    <body>
+     <h1>Ejemplo de formulario para<br> validación con Javascript</h1>
+<form name="form1" onsubmit='return validar();'>
+    <ul>
+        <li>
+            <label for='nombre'>Nombre</label>
+            <input type='text' name='nombre' id='nombre' />
+        </li>
+        <li>
+            <label for='direccion'>Direccion</label>
+            <input type='text' name='direccion' id='direccion'/>
+        </li>
+        <li>
+            <label for='edad'>Edad</label>
+            <input type='text' name='edad' id='edad'/>
+        </li>
+         <li>
+            <label for='email'>E-mail</label>
+            <input type='text' name='email' id='email'/>
+        </li>
+		<li>
+            <label for='estudios'>Estudios</label>
+            <select id='estudios' name='estudios'/>
+			<option value=''>Seleccione</option>
+			<option>Ninguno</option>
+			<option>Primarios</option>
+			<option>Bachiller</option>
+			<option>Grado</option>
+			<option>Master</option>
+			</select>
+        </li>
+		<li>
+            <label>
+            <input type='checkbox' value='SI' id='acepto'/>
+			He leido y acepto las condiciones.
+			</label>
+        </li>
+		
+    </ul>
+        <button>Registrarse</button>
+</form>
+
+    <script type='text/javascript'>
+function validar(){
+
+var todo_correcto = true;
+
+if(document.getElementById('nombre').value.length < 2 ){
+    todo_correcto = false;
+}
+
+if(document.getElementById('direccion').value.length < 8 ){
+    todo_correcto = false;
+}
+
+if(isNaN(document.getElementById('edad').value)){
+    todo_correcto = false;
+}
+
+var expresion = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
+var email = document.form1.email.value;
+if (!expresion.test(email)){
+	todo_correcto = false;
+}
+
+if(document.getElementById('estudios').value == ''){
+    todo_correcto = false;
+}
+
+if(!document.getElementById('acepto').checked){
+    todo_correcto = false;
+}
+
+if(!todo_correcto){
+    alert('Algunos campos no están correctos, vuelva a revisarlos');
+}
+
+return todo_correcto;
+}
+</script>
+
+    </body>
+
+</html>

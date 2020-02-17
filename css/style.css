@@ -41,3 +41,48 @@ body {
     background-color: gray;
     border-radius: 20px;
 }
+
+.form {
+    padding: 25px;
+    margin: auto auto;
+    width: 300px;
+    display: block;
+}
+
+input:valid {
+    color: green;
+}
+
+input:invalid {
+    color: red;
+}
+
+input:focus {
+    background-color: #fff;
+}
+
+input,
+select {
+    width: 250px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.btnEnviar {
+    margin-top: 15px;
+}
+
+
+/* TABLA */
+
+table {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+th,
+td {
+    width: 15%;
+    /* text-align: left; */
+}
