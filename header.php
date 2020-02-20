@@ -7,6 +7,34 @@
     <title>Sistema para AUXS</title>
 
     <link rel="stylesheet" href="css/style.css" />
+    <script>
+        function valid() {
+            if (confirm("Realmente desea eliminar?")) {
+                return true;
+            }
+            return false;
+        }
+
+        function validate() {
+
+            valor = document.getElementById("name").value;
+            console.log(valor);
+            if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
+                // alert('[ERROR] El campo debe ser texto');
+                document.getElementById('alert').innerHTML = '<p>el campo Nombre debe estar lleno y contener solo letras</p>';
+                return false;
+            }
+
+            valor = document.getElementById("ru").value;
+            if (isNaN(valor) || valor == null || valor.length == 0) {
+                // alert('[ERROR] El campo debe ser numero');
+                document.getElementById('alert').innerHTML = '<p>el campo RU debe estar lleno y contener solo números</p>';
+                
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 
 <body>

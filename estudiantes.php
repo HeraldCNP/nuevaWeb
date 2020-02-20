@@ -35,13 +35,14 @@
                                     <td>".$student['email']."</td>
                                     <td>".$student['web']."</td>
                                     <td>
-                                        <a href='deleteEstudiante.php?id=".$student['id']."' onclick='confirmation()'>Eliminar</a>,
+                                        <a href='deleteEstudiante.php?id=".$student['id']."' onclick='return valid()'>Eliminar</a>,
                                         <a href='editarEstudiante.php?id=".$student['id']."'>Editar</a>,
                                     </td>
                                 </tr>  
                                 ";
 
                             }
+                            
                         ?>
                     </tbody>
                 </table>

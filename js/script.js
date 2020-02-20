@@ -1,10 +1,13 @@
-< script >
-    function valid() {
-        if (confirm("Realmente desea eliminar?")) {
-            return true;
-        }
-        return false;
+<
+script >
+    alert("entra");
+
+function valid() {
+    if (confirm("Realmente desea eliminar?")) {
+        return true;
     }
+    return false;
+}
 
 function validate() {
 

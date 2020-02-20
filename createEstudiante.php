@@ -4,7 +4,7 @@
         <section class="content">
             <div>
                 <div class="form">
-                    <form action="storeEstudiante.php" method="POST" onsubmit="return validate();">
+                    <form action="storeEstudiante.php" method="POST" onsubmit="return validate()">
                         <label>Nombres<input type="text" name="name" id="name" autofocus/></label>
                         <label>Apellidos<input type="text" name="lastname"
 							/></label>
@@ -15,6 +15,8 @@
                         <label>Correo Electronico<input type="email" name="email"
 							/></label>
                         <label>Pagina Web<input type="url" name="web"/></label>
+
+                        <div id="alert"></div>
                         <button class="btnEnviar" type="submit">Registrar</button>
                     </form>
                 </div>
